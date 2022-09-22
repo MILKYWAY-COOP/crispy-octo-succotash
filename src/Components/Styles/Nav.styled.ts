@@ -7,7 +7,8 @@ export const StyledNav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1.5em;
-  box-shadow: rgba(9, 0, 0, 0.25) 0px 2px 1px,
+  background: ${(props: any) => props.theme.mainColor};
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 1px,
     rgba(0, 0, 0, 0.13) 0px 0px 2px 1px;
 
   h1 {
@@ -16,6 +17,7 @@ export const StyledNav = styled.div`
     font-size: 1.5em;
     letter-spacing: 2px;
     transition: all 0.3s ease;
+    background: ${(props: any) => props.theme.mainColor};
 
     &:hover {
       scale: 1.1;
@@ -26,6 +28,12 @@ export const StyledNav = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+    background: ${(props: any) => props.theme.mainColor};
+
+    .active {
+      transition: 0.3s ease-in-out;
+      transform: scale(1.3);
+    }
 
     #light,
     #blue,
@@ -39,7 +47,7 @@ export const StyledNav = styled.div`
       &:hover {
         transition: 0.3s ease;
         cursor: pointer;
-        transform: scale(.9);
+        transform: scale(0.9);
       }
     }
 
@@ -65,11 +73,13 @@ export const StyledNav = styled.div`
     align-items: center;
     gap: 1rem;
     padding-right: 1rem;
-
+    background: ${(props: any) => props.theme.mainColor};
+    
     a {
       text-decoration: none;
       font-size: 1.5em;
       color: ${(props: any) => props.theme.mainTextColor};
+      background: ${(props: any) => props.theme.mainColor};
 
       &:hover {
         transition: 0.3s ease-in-out;

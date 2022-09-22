@@ -1,8 +1,11 @@
 import { ThemeProvider } from 'styled-components';
-import { BodyStyles } from './Components/Styles';
+import GlobalStyles from './Components/Styles/Global.Styled';
+import AppStyles from './Components/Styles/App.styled';
+import { Projects } from './Components/Projects';
+import { Footer } from './Components/Footer';
 import Nav from './Components/Nav';
 
-import {useState} from 'react';
+import { useState } from 'react';
 
 const blueTheme = {
   mainColor: '#152028',
@@ -25,11 +28,11 @@ const greenTheme = {
 
   borderColor: '#161914',
 
-  mainTextColor: '#fff',
+  mainTextColor: 'hsl(192,100%,9%)',
   secondaryTextColor: '#eeeeee',
   themeDotBorderColor: '#fff',
   previewBgColor: 'rgb(81, 90, 72,0.8)',
-  previewShadowColor: '#2a2f25',
+  previewShadowColor: '#d0f5aa',
 
   buttonColor: '#669966'
 };
@@ -64,21 +67,24 @@ const lightTheme = {
   buttonColor: 'black'
 };
 
-
 function App() {
   const [theme, setTheme] = useState(purpleTheme);
 
   return (
     <ThemeProvider theme={theme}>
-      <BodyStyles />
-      <Nav
-        theme={theme}
-        setTheme={setTheme}
-        lightTheme={lightTheme}
-        purpleTheme={purpleTheme}
-        blueTheme={blueTheme}
-        greenTheme={greenTheme}
-      />
+      <GlobalStyles />
+      <AppStyles>
+        <Nav
+          theme={theme}
+          setTheme={setTheme}
+          lightTheme={lightTheme}
+          purpleTheme={purpleTheme}
+          blueTheme={blueTheme}
+          greenTheme={greenTheme}
+        />
+        <Projects />
+        <Footer />
+      </AppStyles>
     </ThemeProvider>
   );
 }

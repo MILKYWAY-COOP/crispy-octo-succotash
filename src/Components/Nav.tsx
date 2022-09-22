@@ -53,6 +53,7 @@ const Nav = (props: any) => {
         <button
           ref={purpleRef}
           id='purple'
+          className='active'
           onClick={handleThemeChange}
         ></button>
         <button ref={greenRef} id='green' onClick={handleThemeChange}></button>

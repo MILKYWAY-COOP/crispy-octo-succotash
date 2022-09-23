@@ -10,6 +10,8 @@ export const StyledProject = styled.div`
   background: ${(props: any) => props.theme.secondaryColor};
 
   .leftDiv {
+    height: 100%;
+    width: 100%;
     padding: 2rem;
     display: grid;
     grid-template-rows: 40% 60%;
@@ -22,6 +24,7 @@ export const StyledProject = styled.div`
     .welcome {
       font-size: 8rem;
       font-weight: 700;
+      font-family: 'Akaya Kanadaka', cursive;
       text-transform: uppercase;
       color: ${(props: any) => props.theme.mainTextColor};
       position: relative;
@@ -43,18 +46,14 @@ export const StyledProject = styled.div`
       animation: welcome 650ms infinite;
       clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
       transform: translate(-0.025em, -0.0125em);
-      /* color: green; */
       opacity: 0.8;
     }
     .welcome span:last-child {
       animation: welcome 375ms infinite;
       clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
       transform: translate(0.0125em, 0.025em);
-      /* color: red; */
       opacity: 0.8;
     }
-
-    /* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
 
     @keyframes welcome {
       0% {
@@ -112,11 +111,14 @@ export const StyledProject = styled.div`
       position: relative;
 
       p {
-        margin-left: 5px;
+        height: 100%;
+        margin: 1em;
         height: auto;
         font-size: 16px;
         overflow: hidden;
         color: ${(props: any) => props.theme.mainTextColor};
+        line-height: 1.5;
+        font-family: 'Nunito', sans-serif;
       }
     }
   }
@@ -128,9 +130,10 @@ export const StyledProject = styled.div`
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
 
     h1 {
+        font-family: 'Nunito', sans-serif;
         font-size: 3rem;
         text-align: center;
-        padding: 1rem;
+        padding: 0 1rem;
         color: ${(props: any) => props.theme.mainTextColor};
         border-bottom: 2px solid ${(props: any) => props.theme.mainTextColor};
       }
@@ -152,11 +155,13 @@ export const StyledProject = styled.div`
                 list-style: none;
                 font-size: 1.5rem;
                 text-align: start;
+                font-family: 'Nunito', sans-serif;
                 transition: all 0.3s ease-in-out;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 color: ${(props: any) => props.theme.mainTextColor};
+                width: auto;
 
                 &:hover {
                     transform: scale(1.1);

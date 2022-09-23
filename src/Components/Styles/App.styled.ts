@@ -13,6 +13,12 @@ const AppStyles = styled.div`
   & > * {
     height: 100%;
   }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default AppStyles;

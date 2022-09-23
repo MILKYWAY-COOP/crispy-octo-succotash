@@ -42,7 +42,11 @@ export const Footer = (props: any) => {
       <div className='rights'>
         <p>
           &copy;2022. A{' '}
-          <a href='https://milkyway-coop.github.io/' target='_blank'>
+          <a
+            href='https://milkyway-coop.github.io/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             MILKYWAY
           </a>{' '}
           PRODUCTION. All rights reserved

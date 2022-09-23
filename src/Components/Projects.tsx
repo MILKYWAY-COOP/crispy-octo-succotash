@@ -1,7 +1,17 @@
+import { useState, useRef } from 'react';
+
 import { FaDownload } from 'react-icons/fa';
 import { StyledProject } from './Styles/Project.styled';
+import { Welcome, Piggery, Chat, Weather, Meme } from './Jobs';
 
 export const Projects = () => {
+  const [leftCard, setLeftCard] = useState(<Welcome />);
+
+  const pigRef = useRef<HTMLSpanElement>(null);
+  const memeRef = useRef<HTMLSpanElement>(null);
+  const chatRef = useRef<HTMLSpanElement>(null);
+  const weatherRef = useRef<HTMLSpanElement>(null);
+
   const downloadFunc = () => {
     fetch('SamplePDF.pdf').then((response) => {
       response.blob().then((blob) => {
@@ -14,43 +24,54 @@ export const Projects = () => {
     });
   };
 
+  const leftCardFunc = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    let id = e.currentTarget.id;
+
+    if (id === 'Piggery') {
+      setLeftCard(<Piggery />);
+      
+    } else if (id === 'Meme') {
+      setLeftCard(<Meme />);
+      
+    } else if (id === 'Chat') {
+      setLeftCard(<Chat />);
+      
+    } else if (id === 'Weather') {
+      setLeftCard(<Weather />);
+      
+    }
+  };
+
   return (
     <StyledProject>
-      <div className='leftDiv'>
-        <h1 className='welcome'>
-          <span aria-hidden='true'>WELCOME</span>
-          WELCOME
-          <span aria-hidden='true'>WELCOME</span>
-        </h1>
-        <div className='leftPara'>
-          <p>
-            I am a full stack developer with a passion for creating beautiful
-            websites and applications. I am currently working as a software
-            engineer at Digikids. I am also a freelance developer and have
-            worked with many clients to create their websites and applications.
-            I am currently looking for a full time position as a software
-            engineer.
-          </p>
-        </div>
-      </div>
+      <div className='leftDiv'>{leftCard}</div>
       <div className='rightDiv'>
         <h1>My Work</h1>
         <div className='bottom'>
           <ul>
             <li>
-              <span>Piggery Unit</span>
+              <span ref={pigRef} id='Piggery' onClick={leftCardFunc}>
+                Piggery Unit
+              </span>
             </li>
             <li>
-              <span>Meme App</span>
+              <span ref={memeRef} id='Meme' onClick={leftCardFunc}>
+                Meme App
+              </span>
             </li>
             <li>
-              <span>Weather App</span>
+              <span ref={weatherRef} id='Weather' onClick={leftCardFunc}>
+                Weather App
+              </span>
             </li>
             <li>
-              <span>Chat App</span>
+              <span ref={chatRef} id='Chat' onClick={leftCardFunc}>
+                Chat App
+              </span>
             </li>
           </ul>
           <div className='btnDiv'>
+            <div className='floater'>Download CV</div>
             <FaDownload onClick={downloadFunc} className='btn' />
           </div>
         </div>

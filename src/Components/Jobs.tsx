@@ -71,7 +71,7 @@ export const Meme = () => {
       </div>
 
       <div className='links'>
-        <a href='https://meme-d50a0.web.app/' target='_blank'>
+        <a href='' target='_blank'>
           <FaEye />
         </a>
         <a
@@ -104,7 +104,7 @@ export const Weather = () => {
 
       <div className='links'>
         <a
-          href='https://weatherapp-f1969.web.app/'
+          href=''
           target='_blank'
           rel='noopener noreferrer'
         >

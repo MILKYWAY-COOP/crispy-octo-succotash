@@ -1,5 +1,4 @@
 import { FaGithub, FaEnvelope } from 'react-icons/fa';
-import { useRef } from 'react';
 import { StyledNav } from './Styles/Nav.styled';
 import Theme from './Theme';
 
@@ -24,7 +23,11 @@ const Nav = (props: any) => {
         <a href='mailto:muchendumaina66@gmail.com'>
           <FaEnvelope />
         </a>
-        <a href='https://github.com/steeeved' target='_blank'>
+        <a
+          href='https://github.com/steeeved'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaGithub />
         </a>
       </div>

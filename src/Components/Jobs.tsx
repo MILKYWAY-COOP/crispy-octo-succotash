@@ -104,7 +104,7 @@ export const Weather = () => {
 
       <div className='links'>
         <a
-          href='https://weatherapp-f1969.web.app/weather'
+          href='https://weatherapp-f1969.web.app/'
           target='_blank'
           rel='noopener noreferrer'
         >

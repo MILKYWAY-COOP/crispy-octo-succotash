@@ -25,7 +25,7 @@ export const Footer = () => {
       </div>
       <div className='rights'>
         <p>
-          &copy; 2022. A <a href='https://milkyway-coop.github.io/' target="_blank">MILKYWAY</a>{' '}
+          &copy;2022. A <a href='https://milkyway-coop.github.io/' target="_blank">MILKYWAY</a>{' '}
           PRODUCTION. All rights reserved
         </p>
       </div>

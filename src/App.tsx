@@ -23,8 +23,8 @@ const blueTheme = {
 };
 
 const greenTheme = {
-  mainColor: '#606856',
-  secondaryColor: '#515a48',
+  mainColor: '#515a48',
+  secondaryColor: '#606856',
 
   borderColor: '#161914',
 
@@ -38,8 +38,8 @@ const greenTheme = {
 };
 
 const purpleTheme = {
-  mainColor: '#463445',
-  secondaryColor: '#382a3f',
+  mainColor: '#382a3f',
+  secondaryColor: '#463445',
 
   borderColor: '#1d1528',
 
@@ -53,8 +53,8 @@ const purpleTheme = {
 };
 
 const lightTheme = {
-  mainColor: '#eaeaea',
-  secondaryColor: '#fff',
+  mainColor: '#fff',
+  secondaryColor: '#eaeaea',
 
   borderColor: '#c1c1c1',
 

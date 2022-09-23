@@ -83,7 +83,14 @@ function App() {
           greenTheme={greenTheme}
         />
         <Projects />
-        <Footer />
+        <Footer
+          theme={theme}
+          setTheme={setTheme}
+          lightTheme={lightTheme}
+          purpleTheme={purpleTheme}
+          blueTheme={blueTheme}
+          greenTheme={greenTheme}
+        />
       </AppStyles>
     </ThemeProvider>
   );

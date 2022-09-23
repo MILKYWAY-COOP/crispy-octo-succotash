@@ -65,16 +65,19 @@ export const StyledProject = styled.div`
                 font-size: 1.2rem;
                 text-align: start;
                 font-family: 'Nunito', sans-serif;
-                transition: all 0.3s ease-in-out;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 color: ${(props: any) => props.theme.mainTextColor};
                 width: auto;
-                cursor: pointer;
                 
-                &:hover {
+                span {
+                  transition: all 0.3s ease-in-out;
+                  cursor: pointer;
+
+                  &:hover {
                     transform: scale(1.1);
+                  }
                 }
                 
                 span::after {

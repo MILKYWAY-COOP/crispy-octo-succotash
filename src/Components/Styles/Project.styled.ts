@@ -9,6 +9,14 @@ export const StyledProject = styled.div`
   gap: 5rem;
   background: ${(props: any) => props.theme.secondaryColor};
 
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 3rem;
+    padding: .7em .7rem;
+    }
+
   .leftDiv {
     height: 100%;
     width: 100%;
@@ -19,113 +27,12 @@ export const StyledProject = styled.div`
     gap: 0.5rem;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
-
-
-    .welcome {
-      font-size: 8rem;
-      font-weight: 700;
-      font-family: 'Akaya Kanadaka', cursive;
-      text-transform: uppercase;
-      color: ${(props: any) => props.theme.mainTextColor};
-      position: relative;
-
-      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
-        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-
-      animation: welcome 500ms infinite;
-    }
-
-    .welcome span {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .welcome span:first-child {
-      animation: welcome 650ms infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-      transform: translate(-0.025em, -0.0125em);
-      opacity: 0.8;
-    }
-    .welcome span:last-child {
-      animation: welcome 375ms infinite;
-      clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-      transform: translate(0.0125em, 0.025em);
-      opacity: 0.8;
-    }
-
-    @keyframes welcome {
-      0% {
-        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-          -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-          -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      14% {
-        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-          -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-          -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      15% {
-        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-          0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-          -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      49% {
-        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-          0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-          -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      50% {
-        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-          0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      99% {
-        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-          0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-      100% {
-        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-          -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-          -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      ::before,
-      ::after {
-        animation-delay: -1ms !important;
-        animation-duration: 1ms !important;
-        animation-iteration-count: 1 !important;
-        background-attachment: initial !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0s !important;
-        transition-delay: 0s !important;
-      }
-    }
-
-    .leftPara {
-      display: flex;
-      justify-content: flex-start;
-      position: relative;
-
-      p {
-        height: 100%;
-        margin: 1em;
-        height: auto;
-        font-size: 16px;
-        overflow: hidden;
-        color: ${(props: any) => props.theme.mainTextColor};
-        line-height: 1.5;
-        font-family: 'Nunito', sans-serif;
-      }
-    }
   }
+  
   .rightDiv {
     display: grid;
     grid-template-rows: 20% 80%;
-    height: 100%;
+    height: auto;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
 
@@ -141,6 +48,7 @@ export const StyledProject = styled.div`
       .bottom {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         padding: 1rem;
         gap: 0.5em;
        
@@ -150,10 +58,11 @@ export const StyledProject = styled.div`
             flex-direction: column;
             padding-left: 1.5em;
             gap: 1rem;
+            height: 100%;
           
             li {
                 list-style: none;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 text-align: start;
                 font-family: 'Nunito', sans-serif;
                 transition: all 0.3s ease-in-out;
@@ -162,7 +71,8 @@ export const StyledProject = styled.div`
                 justify-content: flex-start;
                 color: ${(props: any) => props.theme.mainTextColor};
                 width: auto;
-
+                cursor: pointer;
+                
                 &:hover {
                     transform: scale(1.1);
                 }
@@ -186,8 +96,40 @@ export const StyledProject = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1em;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+
+            &:hover .floater {
+               opacity: 1;
+               pointer-events: auto;
+               top: -30px;
+            }
             
+            .floater {
+                position: absolute;
+                top: 0px;
+                background: ${(props: any) => props.theme.mainTextColor};
+                color: ${(props: any) => props.theme.mainColor};
+                padding: 5px 8px;
+                border-radius: 25px;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                &::before{
+                  position: absolute;
+                  content: '';
+                  height: 15px;
+                  width: 15px;
+                  background: ${(props: any) => props.theme.mainTextColor};
+                  bottom: -8px;
+                  left: 50%;
+                  transform: translateX(-50%) rotate(45deg);
+                }
+            }
+
             .btn {
                 margin-top: 1em;
                 width: 20px;
@@ -195,11 +137,15 @@ export const StyledProject = styled.div`
                 color: ${(props: any) => props.theme.mainTextColor};
                 transition: all 0.3s ease-in-out;
 
-                &:hover {
-                    transform: scale(1.5);
-                }
+                 @media (max-width: 768px) {
+                    width: 25px;
+                    height: 25px;
+                 }
             }
-
+        
+            @media (max-width: 768px) {
+                gap: 0;
+            }
         }
     }
 `;

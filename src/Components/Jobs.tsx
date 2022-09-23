@@ -97,8 +97,8 @@ export const Weather = () => {
 
       <div className='description'>
         <p>
-          An online Weather App built on React js and Typescript. Meme app uses the
-          RapidAPI to fetch current weather data. <br />
+          An online Weather App built on React js and Typescript. Meme app uses
+          the RapidAPI to fetch current weather data. <br />
           <br />
           <br />
           <i>~We might get the data wrong btw</i>
@@ -106,12 +106,17 @@ export const Weather = () => {
       </div>
 
       <div className='links'>
-        <a href='https://weatherapp-f1969.web.app/weather' target='_blank'>
+        <a
+          href='https://weatherapp-f1969.web.app/weather'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaEye />
         </a>
         <a
           href='https://github.com/steeeved/ubiquitous-octo-barnacle'
           target='_blank'
+          rel='noopener noreferrer'
         >
           <FaGithub />
         </a>
@@ -138,13 +143,13 @@ export const Chat = () => {
       </div>
 
       <div className='links'>
-        <a href=''
-          target='_blank'>
+        <a href='' target='_blank' rel='noopener noreferrer'>
           <FaEye />
         </a>
         <a
           href='https://github.com/steeeved/friendly-invention'
           target='_blank'
+          rel='noopener noreferrer'
         >
           <FaGithub />
         </a>

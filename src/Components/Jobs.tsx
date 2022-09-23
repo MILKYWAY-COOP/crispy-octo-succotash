@@ -13,9 +13,7 @@ export const Welcome = () => {
       <div className='leftPara'>
         <p>
           I am a front end developer with a passion for creating beautiful web
-          applications. I am currently working as a part-time software developer
-          at
-          <a href='https://digikids.co.ke/' target='_blank'>
+          applications. I am currently working part-time at <a href='https://digikids.co.ke/' target='_blank'>
             Digikids
           </a>
           . I am also a freelance developer and have worked with many clients to

@@ -7,12 +7,29 @@ export const FooterStyled = styled.footer`
   flex-direction: column;
   background: ${(props: any) => props.theme.secondaryColor};
 
+  @media (max-width: 768px) {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .theme {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
   .icons {
     * {
       margin: 0 10px;
       width: 40px;
       height: 40px;
       color: ${(props: any) => props.theme.mainTextColor};
+    }
+
+    @media (max-width: 768px) {
+      align-items: center;
     }
   }
 
@@ -25,6 +42,10 @@ export const FooterStyled = styled.footer`
       a {
         text-decoration: underline;
         color: ${(props: any) => props.theme.mainTextColor};
+      }
+
+      @media (max-width: 768px) {
+        text-align: center;
       }
     }
   }

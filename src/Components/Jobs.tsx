@@ -15,8 +15,7 @@ export const Welcome = () => {
           I am a front end developer with a passion for creating beautiful web
           applications. I am currently working part-time at <a href='https://digikids.co.ke/' target='_blank'>
             Digikids
-          </a>
-          . I am also a freelance developer and have worked with many clients to
+          </a>. I am also a freelance developer and have worked with many clients to
           create their websites and applications. I am looking for a
           full time position as a Software Developer.
         </p>

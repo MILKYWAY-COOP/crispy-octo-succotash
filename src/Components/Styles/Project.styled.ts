@@ -32,7 +32,7 @@ export const StyledProject = styled.div`
   .rightDiv {
     display: grid;
     grid-template-rows: 20% 80%;
-    height: auto;
+    height: 100%;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
 

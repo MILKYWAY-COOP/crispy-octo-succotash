@@ -77,7 +77,7 @@ export const Meme = () => {
       </div>
 
       <div className='links'>
-        <a href='' target='_blank'>
+        <a href='https://steved.web.app/' target='_blank' rel='noreferrer'>
           <FaEye />
         </a>
         <a
@@ -111,7 +111,7 @@ export const Weather = () => {
 
       <div className='links'>
         <a
-          href=''
+          href='https://steved.web.app/'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -147,7 +147,11 @@ export const Chat = () => {
       </div>
 
       <div className='links'>
-        <a href='' target='_blank' rel='noopener noreferrer'>
+        <a
+          href='https://steved.web.app/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaEye />
         </a>
         <a

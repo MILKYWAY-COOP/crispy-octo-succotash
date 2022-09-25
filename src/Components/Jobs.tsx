@@ -150,7 +150,7 @@ export const Chat = () => {
         <a
           href='https://steved.web.app/'
           target='_blank'
-          rel='noopener noreferrer'
+          rel='noreferrer'
         >
           <FaEye />
         </a>

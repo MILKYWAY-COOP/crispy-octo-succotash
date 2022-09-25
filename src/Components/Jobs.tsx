@@ -13,11 +13,13 @@ export const Welcome = () => {
       <div className='leftPara'>
         <p>
           I am a front end developer with a passion for creating beautiful web
-          applications. I am currently working part-time at <a href='https://digikids.co.ke/' target='_blank'>
+          applications. I am currently working part-time at{' '}
+          <a href='https://digikids.co.ke/' target='_blank' rel='noreferrer'>
             Digikids
-          </a>. I am also a freelance developer and have worked with many clients to
-          create their websites and applications. I am looking for a
-          full time position as a Software Developer.
+          </a>
+          . I am also a freelance developer and have worked with many clients to
+          create their websites and applications. I am looking for a full time
+          position as a Software Developer.
         </p>
       </div>
     </StyledWelcome>
@@ -42,10 +44,14 @@ export const Piggery = () => {
       </div>
 
       <div className='links'>
-        <a href='https://piggery-ms.web.app/' target='_blank'>
+        <a href='https://piggery-ms.web.app/' target='_blank' rel='noreferrer'>
           <FaEye />
         </a>
-        <a href='https://github.com/castynet-studios/pms-fe' target='_blank'>
+        <a
+          href='https://github.com/castynet-studios/pms-fe'
+          target='_blank'
+          rel='noreferrer'
+        >
           <FaGithub />
         </a>
       </div>
@@ -77,6 +83,7 @@ export const Meme = () => {
         <a
           href='https://github.com/steeeved/improved-happiness'
           target='_blank'
+          rel='noreferrer'
         >
           <FaGithub />
         </a>

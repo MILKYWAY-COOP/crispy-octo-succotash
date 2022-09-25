@@ -1,13 +1,16 @@
 {
   "extends": "./tsconfig.json",
+  "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
   "include": [
-    // 👇️ add all the directories and files
-    // that you want to lint here
     "src",
-    "tests",
 
-    // add all files in which you see
-    // the "parserOptions.project" error
-    ".eslintrc.js"
+    "App.styled.ts",
+    "Footer.styled.ts",
+    "Global.styled.ts",
+    "Jobs.styled.ts",
+    "Nav.styled.ts",
+    "Project.styled.ts",
+    "Theme.styled.ts",
+    "Welcome.styled.ts",
   ]
 }

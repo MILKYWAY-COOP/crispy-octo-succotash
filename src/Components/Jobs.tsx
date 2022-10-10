@@ -17,9 +17,10 @@ export const Welcome = () => {
           <a href='https://digikids.co.ke/' target='_blank' rel='noreferrer'>
             Digikids
           </a>
-          . I am also a freelance developer and have worked with many clients to
-          create their websites and applications. I am looking for a full time
-          position as a Software Developer.
+          . My day to day work involves a lot of React js, TypeScript, GitHub
+          workflows, Google Cloud and reviewing code and features from other
+          Developers. I am looking for a full time position as a Software
+          Developer.
         </p>
       </div>
     </StyledWelcome>
@@ -140,11 +141,7 @@ export const Chat = () => {
       </div>
 
       <div className='links'>
-        <a
-          href='https://steved.web.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
+        <a href='https://steved.web.app/' target='_blank' rel='noreferrer'>
           <FaEye />
         </a>
         <a

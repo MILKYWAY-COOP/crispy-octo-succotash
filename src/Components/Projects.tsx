@@ -56,12 +56,12 @@ export const Projects = () => {
             </li>
             <li>
               <span ref={memeRef} id='Meme' onClick={leftCardFunc}>
-                Meme App
+                2022 Elections
               </span>
             </li>
             <li>
               <span ref={weatherRef} id='Weather' onClick={leftCardFunc}>
-                Weather App
+                Digikids
               </span>
             </li>
             <li>

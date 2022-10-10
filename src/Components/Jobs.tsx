@@ -63,25 +63,28 @@ export const Meme = () => {
   return (
     <StyledJob>
       <div className='title'>
-        <h1>Meme Generator</h1>
+        <h1>2022 ELECTIONS</h1>
       </div>
 
       <div className='description'>
         <p>
-          An online Meme App built on React js and Javascript. Meme app uses the
-          Meme Generator API to fetch memes and the user can download them. The
-          app also has a simple account system.
+          Get precise analysis of the 2022 elections. This is a web application
+          built on React js and Typescript with a firebase backend.
         </p>
         <br />
         <br />
       </div>
 
       <div className='links'>
-        <a href='https://steved.web.app/' target='_blank' rel='noreferrer'>
+        <a
+          href='https://milkywayelections.web.app/'
+          target='_blank'
+          rel='noreferrer'
+        >
           <FaEye />
         </a>
         <a
-          href='https://github.com/steeeved/improved-happiness'
+          href='https://github.com/MILKYWAY-COOP/supreme-bassoon'
           target='_blank'
           rel='noreferrer'
         >
@@ -96,33 +99,23 @@ export const Weather = () => {
   return (
     <StyledJob>
       <div className='title'>
-        <h1>Weather App</h1>
+        <h1>Digikids</h1>
       </div>
 
       <div className='description'>
         <p>
-          An online Weather App built on React js and Typescript. Meme app uses
-          the RapidAPI to fetch current weather data. <br />
-          <br />
-          <br />
-          <i>~We might get the data wrong btw</i>
+          This is Digikids main website. The website is built and managed on
+          WordPress.
         </p>
       </div>
 
       <div className='links'>
         <a
-          href='https://steved.web.app/'
+          href='https://digikids.co.ke/'
           target='_blank'
           rel='noopener noreferrer'
         >
           <FaEye />
-        </a>
-        <a
-          href='https://github.com/steeeved/ubiquitous-octo-barnacle'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <FaGithub />
         </a>
       </div>
     </StyledJob>

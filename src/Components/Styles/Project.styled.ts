@@ -8,16 +8,35 @@ export const StyledProject = styled.div`
   padding: 1.5em 2.5rem;
   gap: 5rem;
   background: ${(props: any) => props.theme.secondaryColor};
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     width: 100vw;
     gap: 3rem;
     padding: .7em .7rem;
-    }
-
+  }
+  
   .leftDiv {
+    animation: slideInFromLeft 0.5s ease-in-out;
     height: 100%;
     width: 100%;
     padding: 2rem;
@@ -27,6 +46,10 @@ export const StyledProject = styled.div`
     gap: 0.5rem;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+
+    & > * {
+      animation: slideInFromLeft 0.5s ease-in-out;
+    }
   }
   
   .rightDiv {
@@ -35,6 +58,7 @@ export const StyledProject = styled.div`
     height: 100%;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+    animation: slideInFromRight 0.5s ease-in-out;
 
     h1 {
         font-family: 'Nunito', sans-serif;

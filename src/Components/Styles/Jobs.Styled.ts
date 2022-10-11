@@ -6,6 +6,7 @@ const StyledJob = styled.div`
   align-items: center;
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
+  
 
   .title {
     padding: 1rem;

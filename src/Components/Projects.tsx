@@ -13,7 +13,7 @@ export const Projects = () => {
   const weatherRef = useRef<HTMLSpanElement>(null);
 
   const downloadFunc = () => {
-    fetch('SamplePDF.pdf').then((response) => {
+    fetch('Resume.pdf').then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');

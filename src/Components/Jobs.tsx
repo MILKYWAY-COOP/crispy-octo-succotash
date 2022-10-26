@@ -159,16 +159,16 @@ export const Chat = () => {
 export const Movies = () => {
   return (
     <StyledJob>
-      
       <div className='title'>
         <h1>Get Movies by City</h1>
       </div>
 
       <div className='description'>
         <p>
-          An online Chat App built on React js and Typescript. Chat App uses the
-          Firebase Realtime Database to store messages. <br />
-          The app has a like system and a simple account system. <br />
+          Give me a city name and I will reply with a list of movies that were
+          produced there.
+          <br />
+          <br />
           <br />
           <br />
         </p>

@@ -193,3 +193,36 @@ export const Movies = () => {
     </StyledJob>
   );
 };
+
+export const Koimbi = () => {
+  return (
+    <StyledJob>
+      <div className='title'>
+        <h1>Koimbi Children's</h1>
+      </div>
+
+      <div className='description'>
+        <p>
+          This is Koimbi Children's main website. The website is built with react and typescript.
+          <br />
+          <br />
+          <br />
+          <br />
+        </p>
+      </div>
+
+      <div className='links'>
+        <a href='https://koimbi.web.app/' target='_blank' rel='noreferrer'>
+          <FaEye />
+        </a>
+        <a
+          href='https://github.com/MILKYWAY-COOP/legendary-doodle'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaGithub />
+        </a>
+      </div>
+    </StyledJob>
+  );
+};

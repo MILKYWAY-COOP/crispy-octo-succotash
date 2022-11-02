@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 
 import { FaDownload } from 'react-icons/fa';
 import { StyledProject } from './Styles/Project.styled';
-import { Welcome, Piggery, Chat, Weather, Meme, Movies } from './Jobs';
+import { Welcome, Piggery, Chat, Weather, Meme, Movies, Koimbi } from './Jobs';
 
 export const Projects = () => {
   const [leftCard, setLeftCard] = useState(<Welcome />);
@@ -37,6 +37,8 @@ export const Projects = () => {
       setLeftCard(<Weather />);
     } else if (id === 'Movies') {
       setLeftCard(<Movies />);
+    } else if (id === 'Koimbi') {
+      setLeftCard(<Koimbi />);
     }
   };
 
@@ -79,10 +81,15 @@ export const Projects = () => {
                     Movies
                   </span>
                 </li>
+                <li>
+                  <span ref={chatRef} id='Koimbi' onClick={leftCardFunc}>
+                    Koimbi
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="bottom">
+          <div className='bottom'>
             <div className='btnDiv'>
               <div className='floater'>Download CV</div>
               <FaDownload onClick={downloadFunc} className='btn' />

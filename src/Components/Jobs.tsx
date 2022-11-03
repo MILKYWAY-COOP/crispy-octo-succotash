@@ -13,14 +13,10 @@ export const Welcome = () => {
       <div className='leftPara'>
         <p>
           I am a front end developer with a passion for creating beautiful web
-          applications. I am currently working part-time at{' '}
-          <a href='https://digikids.co.ke/' target='_blank' rel='noreferrer'>
-            Digikids
-          </a>
-          . My day to day work involves a lot of React js, TypeScript, GitHub
-          workflows, Google Cloud and reviewing code and features from other
-          Developers. I am looking for a full time position as a Front End Web
-          Developer.
+          applications. My day to day work involves a lot of React js,
+          TypeScript, GitHub workflows, Google Cloud and reviewing code and
+          features from other Developers. I am looking for a full time position
+          as a Front End Web Developer.
         </p>
       </div>
     </StyledWelcome>

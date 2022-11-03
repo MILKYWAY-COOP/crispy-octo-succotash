@@ -19,7 +19,7 @@ export const Welcome = () => {
           </a>
           . My day to day work involves a lot of React js, TypeScript, GitHub
           workflows, Google Cloud and reviewing code and features from other
-          Developers. I am looking for a full time position as a Software
+          Developers. I am looking for a full time position as a Front End Web
           Developer.
         </p>
       </div>
@@ -69,8 +69,9 @@ export const Meme = () => {
 
       <div className='description'>
         <p>
-          Get precise analysis of the 2022 elections. This is a web application
-          built on React js and Typescript with a firebase backend.
+          Get precise analysis of the 2022 Kenyan General Elections. This is a
+          web application built on React js and Typescript with a firebase
+          backend.
         </p>
         <br />
         <br />
@@ -198,12 +199,13 @@ export const Koimbi = () => {
   return (
     <StyledJob>
       <div className='title'>
-        <h1>Koimbi Children's</h1>
+        <h1 style={{ fontSize: '2.5rem' }}>Koimbi Children's Home</h1>
       </div>
 
       <div className='description'>
         <p>
-          This is Koimbi Children's main website. The website is built with react and typescript.
+          This is Koimbi Children's Home main website. The website is built on
+          react and typescript.
           <br />
           <br />
           <br />

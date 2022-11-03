@@ -67,23 +67,18 @@ export const Projects = () => {
                     Digikids
                   </span>
                 </li>
-                <li>
-                  <span ref={chatRef} id='Chat' onClick={leftCardFunc}>
-                    Chat App
-                  </span>
-                </li>
               </ul>
             </div>
             <div className='bottomLeft'>
               <ul>
                 <li>
                   <span ref={chatRef} id='Movies' onClick={leftCardFunc}>
-                    Movies
+                    Get Movies by City
                   </span>
                 </li>
                 <li>
                   <span ref={chatRef} id='Koimbi' onClick={leftCardFunc}>
-                    Koimbi
+                    Koimbi Children's Home
                   </span>
                 </li>
               </ul>

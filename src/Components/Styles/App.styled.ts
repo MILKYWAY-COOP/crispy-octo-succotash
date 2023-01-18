@@ -5,19 +5,16 @@ const AppStyles = styled.div`
   width: 100vw;
   display: grid;
   grid-template-rows: 15% 60% 20%;
-
+  
   font-family: 'Syne Mono', monospace;
   font-size: 1.15em;
   color: ${(props: any) => props.theme.mainTextColor};
-
-  & > * {
-    height: 100%;
-  }
-
+  
   @media (max-width: 768px) {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 0px;
   }
 `;
 

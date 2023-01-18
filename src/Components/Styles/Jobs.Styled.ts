@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const StyledJob = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
-  
 
   .title {
     padding: 1rem;
@@ -15,11 +16,12 @@ const StyledJob = styled.div`
       font-family: 'Nunito', sans-serif;
       font-size: 3rem;
       text-align: center;
-      padding: 0 1rem;
       color: ${(props: any) => props.theme.mainTextColor};
 
       @media (max-width: 768px) {
         font-size: 2rem;
+        font-weight: 200;
+        text-transform: uppercase;
       }
     }
   }
@@ -49,6 +51,6 @@ const StyledJob = styled.div`
       cursor: pointer;
     }
   }
-`;	
+`;
 
 export default StyledJob;

@@ -12,11 +12,11 @@ export const Welcome = () => {
       </h1>
       <div className='leftPara'>
         <p>
-          I am a front end developer with a passion for creating beautiful web
-          applications. My day to day work involves a lot of React js,
-          TypeScript, GitHub workflows, Google Cloud and reviewing code and
-          features from other Developers. I am looking for a full time position
-          as a Front End Web Developer.
+          I am a web developer who is passionate about designing visually
+          appealing web applications. My daily tasks include working with
+          React.js, TypeScript, GitHub, Google Cloud, and reviewing the code and
+          features of other developers. I am seeking a full-time position as a
+          Front-End Web Developer.
         </p>
       </div>
     </StyledWelcome>
@@ -32,12 +32,12 @@ export const Piggery = () => {
 
       <div className='description'>
         <p>
-          An online pig management system built on React js and Typescript with
-          a firebase backend. This system manages the piggery farm's records.
-          The simple system contains CRUD Operation in each list in the
-          database. The system stores the list of pig breeds and details.
+          A pig management system built using React.js and TypeScript with a
+          Firebase backend. This system is used to manage records for a piggery
+          farm. The system includes basic CRUD (Create, Read, Update, Delete)
+          operations for each list in the database. It also includes a list of
+          pig breeds and their details.
         </p>
-        <br />
       </div>
 
       <div className='links'>
@@ -65,12 +65,10 @@ export const Meme = () => {
 
       <div className='description'>
         <p>
-          Get precise analysis of the 2022 Kenyan General Elections. This is a
-          web application built on React js and Typescript with a firebase
-          backend.
+          Obtain accurate analysis of the 2022 Kenyan General Elections with
+          this web application built using React.js and TypeScript, and powered
+          by a Firebase backend.
         </p>
-        <br />
-        <br />
       </div>
 
       <div className='links'>
@@ -102,8 +100,9 @@ export const Weather = () => {
 
       <div className='description'>
         <p>
-          This is Digikids main website. The website is built and managed on
-          WordPress.
+          This is the official website of Digikids. Built and managed on
+          WordPress, it provides all necessary information about the
+          organization.
         </p>
       </div>
 
@@ -132,8 +131,6 @@ export const Chat = () => {
           An online Chat App built on React js and Typescript. Chat App uses the
           Firebase Realtime Database to store messages. <br />
           The app has a like system and a simple account system. <br />
-          <br />
-          <br />
         </p>
       </div>
 
@@ -164,10 +161,6 @@ export const Movies = () => {
         <p>
           Give me a city name and I will reply with a list of movies that were
           produced there.
-          <br />
-          <br />
-          <br />
-          <br />
         </p>
       </div>
 
@@ -195,17 +188,15 @@ export const Koimbi = () => {
   return (
     <StyledJob>
       <div className='title'>
-        <h1 style={{ fontSize: '2.5rem' }}>Koimbi Children's Home</h1>
+        <h1>Children's Home</h1>
       </div>
 
       <div className='description'>
         <p>
-          This is Koimbi Children's Home main website. The website is built on
-          react and typescript.
-          <br />
-          <br />
-          <br />
-          <br />
+          This is the official website for Koimbi Children's Home. The website
+          has been expertly built using the modern technologies React and
+          TypeScript, providing an interactive and user-friendly experience for
+          visitors.
         </p>
       </div>
 
@@ -215,6 +206,37 @@ export const Koimbi = () => {
         </a>
         <a
           href='https://github.com/MILKYWAY-COOP/legendary-doodle'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaGithub />
+        </a>
+      </div>
+    </StyledJob>
+  );
+};
+
+export const SmartLife = () => {
+  return (
+    <StyledJob>
+      <div className='title'>
+        <h1>Smart Life</h1>
+      </div>
+
+      <div className='description'>
+        <p>
+          An online shop that sells smart products, ships to all major cities and
+          towns in East Africa and for domestic orders (within Kenya), the expected
+          delivery time is 5-8 business days from the date of shipment.
+        </p>
+      </div>
+
+      <div className='links'>
+        <a href='https://smartlife.co.ke/' target='_blank' rel='noreferrer'>
+          <FaEye />
+        </a>
+        <a
+          href='https://github.com/castynet-studios/smart-life'
           target='_blank'
           rel='noopener noreferrer'
         >

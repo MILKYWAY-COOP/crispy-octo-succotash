@@ -11,11 +11,12 @@ import { SiTypescript, SiFirebase } from 'react-icons/si';
 import { FooterStyled } from './Styles/Footer.styled';
 import Theme from './Theme';
 
-
 export const Footer = (props: any) => {
   const { setTheme, lightTheme, blueTheme, purpleTheme, greenTheme, theme } =
     props;
-  
+
+  const year = new Date().getFullYear();
+
   return (
     <FooterStyled>
       <div className='theme'>
@@ -29,19 +30,19 @@ export const Footer = (props: any) => {
         />
       </div>
       <div className='icons'>
+        <FaWordpress />
+        <SiFirebase />
         <FaHtml5 />
         <FaCss3 />
         <FaSass />
-        <SiFirebase />
-        <FaWordpress />
-        <FaPython />
         <FaReact />
         <FaJs />
         <SiTypescript />
+        <FaPython />
       </div>
       <div className='rights'>
         <p>
-          &copy;2022. A{' '}
+          &copy;{year}. A{' '}
           <a
             href='https://milkyway-coop.github.io/'
             target='_blank'

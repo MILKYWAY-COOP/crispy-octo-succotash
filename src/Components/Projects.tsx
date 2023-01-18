@@ -3,24 +3,38 @@ import classNames from 'classnames';
 
 import { FaDownload } from 'react-icons/fa';
 import { StyledProject } from './Styles/Project.styled';
-import { Welcome, Piggery, Chat, Weather, Meme, Movies, Koimbi } from './Jobs';
+import {
+  Welcome,
+  Piggery,
+  Chat,
+  Weather,
+  Meme,
+  Movies,
+  Koimbi,
+  SmartLife
+} from './Jobs';
+
+const leftCardMap = {
+  Piggery: <Piggery />,
+  Meme: <Meme />,
+  Chat: <Chat />,
+  Weather: <Weather />,
+  Movies: <Movies />,
+  Koimbi: <Koimbi />,
+  SmartLife: <SmartLife />
+};
 
 export const Projects = () => {
   const [leftCard, setLeftCard] = useState(<Welcome />);
   const [flip, setFlip] = useState(false);
-  const [is180, setIs180] = useState(0);
+  const [is180, setIs180] = useState(180);
+  const divRef = useRef<HTMLSpanElement>(null);
 
-  const pigRef = useRef<HTMLSpanElement>(null);
-  const memeRef = useRef<HTMLSpanElement>(null);
-  const chatRef = useRef<HTMLSpanElement>(null);
-  const weatherRef = useRef<HTMLSpanElement>(null);
-
-  const classes = classNames('leftDiv', {
-    flip: flip
-  });
-  const classes2 = classNames('card', {
-    rotate180: (is180 / 180) % 2 === 0
-  });
+  const classes = classNames(['leftDiv', { flip }]).toString();
+  const classes2 = classNames([
+    'card',
+    { rotate180: (is180 / 180) % 2 === 0 }
+  ]).toString();
 
   const downloadFunc = () => {
     fetch('Resume.pdf').then((response) => {
@@ -33,41 +47,15 @@ export const Projects = () => {
       });
     });
   };
-
   const leftCardFunc = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-    let id = e.currentTarget.id;
+    const id = e.currentTarget.id as keyof typeof leftCardMap;
+    if (!leftCardMap[id]) return;
+    setFlip((prevFlip) => !prevFlip);
 
-    if (id === 'Piggery') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Piggery />);
-      }, 200);
-    } else if (id === 'Meme') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Meme />);
-      }, 200);
-    } else if (id === 'Chat') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Chat />);
-      }, 200);
-    } else if (id === 'Weather') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Weather />);
-      }, 200);
-    } else if (id === 'Movies') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Movies />);
-      }, 200);
-    } else if (id === 'Koimbi') {
-      setFlip(!flip);
-      setTimeout(() => {
-        setLeftCard(<Koimbi />);
-      }, 200);
-    }
+    setTimeout(() => {
+      setLeftCard(leftCardMap[id]);
+    }, 200);
+
     setTimeout(() => {
       setIs180((prev) => (prev += 180));
     }, 250);
@@ -78,26 +66,24 @@ export const Projects = () => {
       <div className={classes}>
         <div className={classes2}>{leftCard}</div>
       </div>
-
       <div className='rightDiv'>
         <h1>My Work</h1>
-
         <div className='main'>
           <div className='top'>
             <div className='bottomRight'>
               <ul>
                 <li>
-                  <span ref={pigRef} id='Piggery' onClick={leftCardFunc}>
+                  <span ref={divRef} id='Piggery' onClick={leftCardFunc}>
                     Piggery Unit
                   </span>
                 </li>
                 <li>
-                  <span ref={memeRef} id='Meme' onClick={leftCardFunc}>
+                  <span id='Meme' onClick={leftCardFunc}>
                     2022 Elections
                   </span>
                 </li>
                 <li>
-                  <span ref={weatherRef} id='Weather' onClick={leftCardFunc}>
+                  <span id='Weather' onClick={leftCardFunc}>
                     Digikids
                   </span>
                 </li>
@@ -106,13 +92,18 @@ export const Projects = () => {
             <div className='bottomLeft'>
               <ul>
                 <li>
-                  <span ref={chatRef} id='Movies' onClick={leftCardFunc}>
+                  <span id='Movies' onClick={leftCardFunc}>
                     Get Movies by City
                   </span>
                 </li>
                 <li>
-                  <span ref={chatRef} id='Koimbi' onClick={leftCardFunc}>
+                  <span id='Koimbi' onClick={leftCardFunc}>
                     Koimbi Children's Home
+                  </span>
+                </li>
+                <li>
+                  <span id='SmartLife' onClick={leftCardFunc}>
+                    Smart Life
                   </span>
                 </li>
               </ul>

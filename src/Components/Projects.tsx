@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import classNames from 'classnames';
 
 import { FaDownload } from 'react-icons/fa';
 import { StyledProject } from './Styles/Project.styled';
@@ -6,11 +7,20 @@ import { Welcome, Piggery, Chat, Weather, Meme, Movies, Koimbi } from './Jobs';
 
 export const Projects = () => {
   const [leftCard, setLeftCard] = useState(<Welcome />);
+  const [flip, setFlip] = useState(false);
+  const [is180, setIs180] = useState(0);
 
   const pigRef = useRef<HTMLSpanElement>(null);
   const memeRef = useRef<HTMLSpanElement>(null);
   const chatRef = useRef<HTMLSpanElement>(null);
   const weatherRef = useRef<HTMLSpanElement>(null);
+
+  const classes = classNames('leftDiv', {
+    flip: flip
+  });
+  const classes2 = classNames('card', {
+    rotate180: (is180 / 180) % 2 === 0
+  });
 
   const downloadFunc = () => {
     fetch('Resume.pdf').then((response) => {
@@ -28,23 +38,47 @@ export const Projects = () => {
     let id = e.currentTarget.id;
 
     if (id === 'Piggery') {
-      setLeftCard(<Piggery />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Piggery />);
+      }, 200);
     } else if (id === 'Meme') {
-      setLeftCard(<Meme />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Meme />);
+      }, 200);
     } else if (id === 'Chat') {
-      setLeftCard(<Chat />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Chat />);
+      }, 200);
     } else if (id === 'Weather') {
-      setLeftCard(<Weather />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Weather />);
+      }, 200);
     } else if (id === 'Movies') {
-      setLeftCard(<Movies />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Movies />);
+      }, 200);
     } else if (id === 'Koimbi') {
-      setLeftCard(<Koimbi />);
+      setFlip(!flip);
+      setTimeout(() => {
+        setLeftCard(<Koimbi />);
+      }, 200);
     }
+    setTimeout(() => {
+      setIs180((prev) => (prev += 180));
+    }, 250);
   };
 
   return (
     <StyledProject>
-      <div className='leftDiv'>{leftCard}</div>
+      <div className={classes}>
+        <div className={classes2}>{leftCard}</div>
+      </div>
+
       <div className='rightDiv'>
         <h1>My Work</h1>
 

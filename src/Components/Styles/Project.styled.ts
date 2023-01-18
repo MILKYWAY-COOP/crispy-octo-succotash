@@ -1,66 +1,64 @@
 import styled from 'styled-components';
 
 export const StyledProject = styled.div`
-  display: grid;
+  width: 100%;
   height: 100%;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1.5em 2.5rem;
-  gap: 5rem;
+  gap: 1rem;
   background: ${(props: any) => props.theme.secondaryColor};
 
-  @keyframes slideInFromLeft {
+  @keyframes flip-animation {
     0% {
-      transform: translateX(-100%);
+      transform: rotateY(0deg);
     }
     100% {
-      transform: translateX(0);
+      transform: rotateY(180deg);
     }
   }
 
-  @keyframes slideInFromRight {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    gap: 3rem;
-    padding: 0.7em 0.7rem;
+  .flip {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
   }
 
   .leftDiv {
-    animation: slideInFromLeft 0.5s ease-in-out;
     height: 100%;
     width: 100%;
-    padding: 2rem;
-    display: grid;
-    grid-template-rows: 40% 60%;
-    background: ${(props: any) => props.theme.secondaryColor};
+    position: relative;
+    padding: 20px;
     gap: 0.5rem;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px,
-      rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+    top: 0;
+    left: 0;
+    transition: all 0.8s ease;
 
-    & > * {
-      animation: slideInFromLeft 0.5s ease-in-out;
+    .rotate180 {
+      transform: rotateY(180deg);
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: ${(props: any) => props.theme.secondaryColor};
+      box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
     }
   }
 
   .rightDiv {
-    display: grid;
-    grid-template-rows: 20% 80%;
     height: 100%;
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
-    animation: slideInFromRight 0.5s ease-in-out;
 
     h1 {
       font-family: 'Nunito', sans-serif;
@@ -74,10 +72,11 @@ export const StyledProject = styled.div`
     .main {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
 
       .top {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-around;
         padding: 1rem;
         gap: 0.5em;
 
@@ -87,7 +86,7 @@ export const StyledProject = styled.div`
             display: flex;
             flex-direction: column;
             padding-left: 1.5em;
-            gap: 1rem;
+            gap: 0.5rem;
             height: 100%;
 
             li {
@@ -99,7 +98,6 @@ export const StyledProject = styled.div`
               align-items: center;
               justify-content: flex-start;
               color: ${(props: any) => props.theme.mainTextColor};
-              width: auto;
 
               span {
                 transition: all 0.3s ease-in-out;
@@ -122,6 +120,20 @@ export const StyledProject = styled.div`
 
               span:hover::after {
                 width: 100%;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+
+          .bottomRight,
+          .bottomLeft {
+            ul {
+              padding-left: 5px;
+              li {
+                font-size: 1rem;
               }
             }
           }
@@ -192,6 +204,24 @@ export const StyledProject = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 700px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 0.7em 0.7rem;
+
+    .leftDiv,
+    .rightDiv {
+      width: 100%;
+      min-height: 50%;
+      flex: 1;
+    }
+
+    .rightDiv {
+      gap: 20px;
     }
   }
 `;

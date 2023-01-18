@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
 body {
     background-color: ${(props: any) => props.theme.secondaryColor};
     height: 100vh;
+
+    @media (max-width: 768px) {
+        height: fit-content;
+    }
 }
 `;
 

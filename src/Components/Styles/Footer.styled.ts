@@ -21,11 +21,11 @@ export const FooterStyled = styled.footer`
   }
 
   .icons {
-    * {
+    svg {
       margin: 0 10px;
       width: 40px;
-      height: 40px;
-      color: ${(props: any) => props.theme.mainTextColor};
+      min-height: 40px;
+      fill: ${(props: any) => props.theme.mainTextColor};
     }
 
     @media (max-width: 768px) {

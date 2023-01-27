@@ -133,7 +133,7 @@ export const StyledProject = styled.div`
             ul {
               padding-left: 5px;
               li {
-                font-size: 1rem;
+                font-size: 1.2rem;
               }
             }
           }
@@ -209,19 +209,49 @@ export const StyledProject = styled.div`
 
   @media (max-width: 768px) {
     min-height: 700px;
+    min-width: 100%;
     display: grid;
     grid-template-rows: 50% 50%;
-    padding: 0.7em 0.7rem;
+    padding: 20px 0px;
+    margin: 0px;
 
     .leftDiv,
     .rightDiv {
-      width: 100%;
-      min-height: 50%;
+      min-width: calc(100vw - 20px);
+      min-height: fit-content;
       flex: 1;
+      padding: 0px;
     }
-
+    
     .rightDiv {
-      gap: 20px;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      
+      .main {
+        position: relative;
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        
+        .top {
+          min-width: calc(100% - 1.4rem);
+          display: flex;
+          flex-direction: column;
+        }
+
+        .bottom {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: fit-content;
+        }
+      }
+
+
     }
   }
 `;

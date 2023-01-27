@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { ThemeStyled } from './Styles/Theme.styled';
 
 const Theme = (props: any) => {
-  const { setTheme, lightTheme, blueTheme, purpleTheme, greenTheme, theme } =
+  const { setTheme, lightTheme, blueTheme, purpleTheme, greenTheme } =
     props;
   const lightRef = useRef<HTMLButtonElement>(null);
   const blueRef = useRef<HTMLButtonElement>(null);
@@ -12,8 +12,6 @@ const Theme = (props: any) => {
   const handleThemeChange = (e: React.MouseEvent<HTMLButtonElement>) => {
     // get the id of the clicked element
     const id = e.currentTarget.id;
-    console.log(id);
-    console.log(theme);
     if (id === 'light') {
       setTheme(lightTheme);
       lightRef.current?.classList.add('active');

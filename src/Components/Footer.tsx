@@ -35,8 +35,8 @@ export const Footer = (props: any) => {
         <FaHtml5 />
         <FaCss3 />
         <FaSass />
-        <FaReact />
         <FaJs />
+        <FaReact />
         <SiTypescript />
         <FaPython />
       </div>

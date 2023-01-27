@@ -11,11 +11,13 @@ const AppStyles = styled.div`
   color: ${(props: any) => props.theme.mainTextColor};
   
   @media (max-width: 768px) {
+    min-width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
     padding-bottom: 0px;
   }
+
 `;
 
 export default AppStyles;

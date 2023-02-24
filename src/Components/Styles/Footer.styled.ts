@@ -21,8 +21,14 @@ export const FooterStyled = styled.footer`
   }
 
   .icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
     svg {
-      margin: 0 10px;
+      flex: 1/11;
+      margin: 10px 10px;
       width: 40px;
       min-height: 40px;
       color: ${(props: any) => props.theme.mainTextColor};

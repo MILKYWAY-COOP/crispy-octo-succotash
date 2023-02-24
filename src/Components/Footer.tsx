@@ -7,7 +7,8 @@ import {
   FaJs,
   FaWordpress
 } from 'react-icons/fa';
-import {TbBrandReactNative} from 'react-icons/tb';
+import { TbBrandNextjs } from 'react-icons/tb';
+// import {TbBrandReactNative} from 'react-icons/tb';
 import { SiTypescript, SiFirebase } from 'react-icons/si';
 import { FooterStyled } from './Styles/Footer.styled';
 import Theme from './Theme';
@@ -38,7 +39,8 @@ export const Footer = (props: any) => {
         <FaSass />
         <FaJs />
         <FaReact />
-        <TbBrandReactNative />
+        {/* <TbBrandReactNative /> */}
+        <TbBrandNextjs />
         <SiTypescript />
         <FaPython />
       </div>

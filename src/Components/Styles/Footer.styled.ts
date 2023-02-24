@@ -25,7 +25,7 @@ export const FooterStyled = styled.footer`
       margin: 0 10px;
       width: 40px;
       min-height: 40px;
-      fill: ${(props: any) => props.theme.mainTextColor};
+      color: ${(props: any) => props.theme.mainTextColor};
     }
 
     @media (max-width: 768px) {
